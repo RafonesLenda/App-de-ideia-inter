@@ -1,0 +1,146 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Layout principal */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Força o layout vertical */
+    gap: 20px; /* Espaçamento entre as seções */
+    padding: 20px;
+}
+
+/* Informações da Empresa */
+.empresa-info {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.empresa-info h2 {
+    margin-bottom: 15px;
+}
+
+.empresa-info p {
+    margin: 10px 0;
+}
+
+.empresa-info a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.empresa-info a:hover {
+    text-decoration: underline;
+}
+
+.empresa-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Resíduos Produzidos */
+.empresa-residuos {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.empresa-residuos h2 {
+    margin-bottom: 15px;
+}
+
+.empresa-residuos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.empresa-residuos ul li {
+    margin-bottom: 10px;
+}
+
+/* Produtos e Serviços */
+.empresa-produtos {
+    padding: 20px;
+}
+
+.empresa-produtos h2 {
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.card a:hover {
+    background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+#foto{
+    width: 100px;
+    height: 100px;
+}

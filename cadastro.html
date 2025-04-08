@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appp.css">
+    <title>Cadastro de Usuário</title>
+    <script>
+        function toggleForm() {
+            const tipoUsuario = document.getElementById("tipo-usuario").value;
+            const empresaForm = document.getElementById("empresa-form");
+            const pessoalForm = document.getElementById("pessoal-form");
+
+            if (tipoUsuario === "empresa") {
+                empresaForm.style.display = "block";
+                pessoalForm.style.display = "none";
+            } else if (tipoUsuario === "pessoal") {
+                empresaForm.style.display = "none";
+                pessoalForm.style.display = "block";
+            } else {
+                empresaForm.style.display = "none";
+                pessoalForm.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Usuário</h1>
+    </header>
+    <main>
+        <form id="cadastro-form" action="app.html" method="get">
+            <div class="perguntas">
+                <label for="tipo-usuario">Você é:</label>
+                <select id="tipo-usuario" name="tipo-usuario" onchange="toggleForm()" required>
+                    <option value="">Selecione</option>
+                    <option value="empresa">Empresa</option>
+                    <option value="pessoal">Perfil Pessoal</option>
+                </select>
+            </div>
+
+            <!-- Formulário para Empresa -->
+            <div id="empresa-form" style="display: none;">
+                <label for="nome-empresa">Nome da empresa:</label>
+                <input type="text" id="nome-empresa" name="nome-empresa" required>
+
+                <label for="tipo-empresa">Tipo de empresa:</label>
+                <select id="tipo-empresa" name="tipo-empresa" required>
+                    <option value="industrial">Industrial</option>
+                    <option value="prestador-servicos">Prestador de serviços</option>
+                </select>
+
+                <label for="numero-industrias">Número de indústrias (ou nenhuma):</label>
+                <input type="number" id="numero-industrias" name="numero-industrias" min="0" required>
+
+                <label for="setor-industrial">Setor industrial:</label>
+                <input type="text" id="setor-industrial" name="setor-industrial">
+
+                <label for="descricao-empresa">Descrição da empresa:</label>
+                <textarea id="descricao-empresa" name="descricao-empresa" rows="4" required></textarea>
+
+                <label for="data-fundacao">Data de fundação:</label>
+                <input type="date" id="data-fundacao" name="data-fundacao" required>
+            </div>
+
+            <!-- Formulário para Perfil Pessoal -->
+            <div id="pessoal-form" style="display: none;">
+                <label for="nome-pessoal">Nome:</label>
+                <input type="text" id="nome-pessoal" name="nome-pessoal" required>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="0" required>
+
+                <label for="localidade">Localidade:</label>
+                <input type="text" id="localidade" name="localidade" required>
+
+                <label for="cargo-atual">Cargo Atual:</label>
+                <input type="text" id="cargo-atual" name="cargo-atual">
+
+                <label for="descricao-pessoal">Descrição:</label>
+                <textarea id="descricao-pessoal" name="descricao-pessoal" rows="4" required></textarea>
+
+                <label for="formacao-academica">Formação Acadêmica:</label>
+                <input type="text" id="formacao-academica" name="formacao-academica" required>
+
+                <label for="cargos-disponiveis">Cargos que está disponível:</label>
+                <input type="text" id="cargos-disponiveis" name="cargos-disponiveis" required>
+            </div>
+
+            <br>
+            <button type="submit" id="botao-enviar">Enviar</button>
+        </form>
+    </main>
+
+    <p><a href="app.html">Voltar</a></p>
+</body>
+</html>
